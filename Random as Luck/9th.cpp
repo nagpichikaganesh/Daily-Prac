@@ -1,4 +1,3 @@
-// You are using GCC
 #include <bits/stdc++.h>
 using namespace std;
 
