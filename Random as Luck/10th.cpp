@@ -2,23 +2,27 @@
 #include <bits/stdc++.h>
 using namespace std;
 
-class Solution{
+class Complex{
 public:
-    void answer(int n, void * arr){
-        float * arr1 = static_cast<float*>(arr);
-        sort(arr1, arr1+n);
-        cout << fixed << setprecision(1) << arr1[0];
+    int a1;
+    int a2;
+    
+    Complex(int x, int y){
+        this->a1 = x;
+        this->a2 = y;
     }
 };
 
 int main(){
-    Solution sol;
-    int n;
-    cin >> n;
-    float *arr = new float[n];
-        for(int i = 0; i < n; i++){
-            cin >> arr[i];}
-    sol.answer(n, arr);
-    delete[] arr;
+    int a1, a2, b1, b2;
+    cin >> a1 >> a2;
+    cin >> b1 >> b2;
+    
+    Complex *Obj1 = new  Complex(a1, a2);
+    Complex *Obj2 = new Complex(b1, b2);
+    
+    cout << "Coordinates: " << endl;
+    cout << "(x, y) = (" << Obj1->a1 << ", " << Obj1->a2 << ")" << endl;
+    cout << "(x, y) = (" << Obj2->a1 << ", " << Obj2->a2 << ")" << endl;
     return 0;
 }
